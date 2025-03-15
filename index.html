@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Flowchart Generator</h1>
+        <div class="input-section">
+            <h2>Describe Your Flowchart</h2>
+            <textarea id="flowchart-description" placeholder="Enter a description of the flowchart you want to create..."></textarea>
+            <div class="options">
+                <div class="direction-option">
+                    <label>Direction:</label>
+                    <select id="flowchart-direction">
+                        <option value="TD">Top-Down</option>
+                        <option value="LR">Left-Right</option>
+                    </select>
+                </div>
+            </div>
+            <button id="generate-btn">Generate Flowchart</button>
+        </div>
+        <div class="output-section">
+            <h2>Your Flowchart</h2>
+            <div id="flowchart-container"></div>
+            <div class="code-container">
+                <h3>Mermaid Code</h3>
+                <pre id="mermaid-code"></pre>
+                <button id="copy-code-btn">Copy Code</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.0.2/dist/mermaid.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
